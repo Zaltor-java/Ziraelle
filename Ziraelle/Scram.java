@@ -1,8 +1,6 @@
 ﻿package Ziraelle;
 public class Scram {
     String scram="";
-    //ключ шифрования
-    // encrypt key
     public String scramming(String text, long key) {
         /*
         Цикл, обрабатывающий каждый символ ввода и прогоняющий его через ключ путём исключающего НЕ,
