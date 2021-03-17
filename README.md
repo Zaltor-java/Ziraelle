@@ -1,7 +1,7 @@
 
 # Ziraelle-encrypter🔑
 
-vthis program encrypts your files using symmetric encryption algorithm
+♨️this program encrypts your files using symmetric encryption algorithm
 I decided to slightly improve the problem presented in the book "java development for beginners G.Shildt". I am a beginner in programming and I will be grateful for pointing out my mistakes, shortcomings, and also accept any advice and suggestions. In my plans to add the ability for the user to choose their own encryption key and make the possibility of asymmetric encryption.
 
 
