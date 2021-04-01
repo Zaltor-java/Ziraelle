@@ -1,12 +1,10 @@
 package Ziraelle;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Scrambler {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args)  {
+        Scanner scn = new Scanner(System.in);
         long key;
         String endInput;
         System.out.println("Добро пожаловать в программу \"Ziraelle\", Что вы хотите сделать?"); // Ziraelle - ласточка. swallow bird
@@ -14,14 +12,14 @@ public class Scrambler {
             System.out.println("1.Зашифровать ");
             System.out.println("2.Расшифровать");
             // пользовательский ввод на дальнейшее поведение программы
-            int inputChoise = Integer.parseInt(reader.readLine());
+            int inputChoise = scn.nextInt();
             switch (inputChoise) {
                 case (1):
                     System.out.print("Введите текст для шифрования: ");
-                    String scramText = reader.readLine();
+                    String scramText = scn.next();
 
                     System.out.print("Придумайте ключ шифрования (Числовое): ");
-                    key = Long.parseLong(reader.readLine());
+                    key = scn.nextLong();
 
                     // передача ввода в класс scram и его дальнейшее шифрование
                     Scram scram = new Scram(scramText, key);
@@ -29,10 +27,10 @@ public class Scrambler {
                     break;
                 case (2):
                     System.out.print("Введите текст для расшифровки: ");
-                    String descramText = reader.readLine();
+                    String descramText = scn.next();
 
                     System.out.print("Введите ключ шифрования: ");
-                    key = Long.parseLong(reader.readLine());
+                    key = scn.nextLong();
 
                     Scram descram = new Scram(descramText, key);
                     System.out.println(descram.scramming());
@@ -41,7 +39,7 @@ public class Scrambler {
                     System.out.println("Такого варианта нет");
             }
             System.out.println("Хотите повторно воспользоваться программой? (y/n)");
-            endInput = reader.readLine().toLowerCase();
+            endInput = scn.next().toLowerCase();
         } while (endInput.equals("y"));
     }
 }
