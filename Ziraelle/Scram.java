@@ -2,8 +2,15 @@ package Ziraelle;
 
 public class Scram {
     String scram = "";
+    private final String text;
+    private final long key;
 
-    public String scramming(String text, long key) {
+    public Scram(String text, long key) {
+        this.text = text;
+        this.key = key;
+    }
+
+    public String scramming() {
         /*
         Цикл, обрабатывающий каждый символ ввода и прогоняющий его через ключ путём исключающего ИЛИ (XOR),
         при первом прогоне сообщение шифруется, а при втором расшифровывается (Симметричное шифрование)
